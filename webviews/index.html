@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JS-TALK DEMO | LionIQ VueJS </title>
+
+    <style type="text/css">
+
+      * { 
+          -moz-box-sizing: border-box; 
+          -webkit-box-sizing: border-box; 
+           box-sizing: border-box; 
+      }
+
+      body {
+        margin: 0;
+      }
+      
+      #content {
+        height: 100%;
+      }
+
+      #app {
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #2c3e50;
+      }
+
+      h1, h2 {
+        font-weight: normal;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      a {
+        color: #42b983;
+      }
+      </style>
+
+    </style>
+
+    <script type="text/javascript">
+      // some global script stuff here
+      var API_URL = "https://lioniq.com/api";
+      var APP_KEY = "15ef0668e2f7d3234c1706997156c8a2";
+      var APP_SECRET = "2ab6633650437c8bb29ee5bcdf072034";
+
+    </script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  </head>
+  <body>
+
+    <div id="app">
+      <div id="content">
+        
+        <!-- router outlet -->
+        <router-view></router-view>
+
+      </div>
+    </div>
+
+    <script src="dist/build.js"></script>
+  </body>
+</html>

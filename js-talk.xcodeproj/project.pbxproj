@@ -8,20 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		114893551DEBC6A700476D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114893541DEBC6A700476D6A /* AppDelegate.swift */; };
-		114893571DEBC6A700476D6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114893561DEBC6A700476D6A /* ViewController.swift */; };
 		1148935A1DEBC6A700476D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114893581DEBC6A700476D6A /* Main.storyboard */; };
 		1148935C1DEBC6A700476D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1148935B1DEBC6A700476D6A /* Assets.xcassets */; };
 		1148935F1DEBC6A700476D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1148935D1DEBC6A700476D6A /* LaunchScreen.storyboard */; };
+		114893671DEBC78F00476D6A /* NativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114893661DEBC78F00476D6A /* NativeViewController.swift */; };
+		114893691DEBC7A900476D6A /* HybridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114893681DEBC7A900476D6A /* HybridViewController.swift */; };
+		114893741DEC203D00476D6A /* webviews in Resources */ = {isa = PBXBuildFile; fileRef = 114893731DEC203D00476D6A /* webviews */; };
+		71EDCDDE02D417DA0260513E /* Pods_js_talk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8105F390E42315E3942B6363 /* Pods_js_talk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		114893511DEBC6A700476D6A /* js-talk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "js-talk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		114893541DEBC6A700476D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		114893561DEBC6A700476D6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		114893591DEBC6A700476D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1148935B1DEBC6A700476D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1148935E1DEBC6A700476D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		114893601DEBC6A700476D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114893661DEBC78F00476D6A /* NativeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeViewController.swift; sourceTree = "<group>"; };
+		114893681DEBC7A900476D6A /* HybridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HybridViewController.swift; sourceTree = "<group>"; };
+		1148936A1DEBD92A00476D6A /* js-talk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "js-talk-Bridging-Header.h"; sourceTree = "<group>"; };
+		114893731DEC203D00476D6A /* webviews */ = {isa = PBXFileReference; lastKnownFileType = folder; path = webviews; sourceTree = "<group>"; };
+		8105F390E42315E3942B6363 /* Pods_js_talk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_js_talk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CD0E47B8630A11E1DDF123 /* Pods-js-talk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-js-talk.release.xcconfig"; path = "Pods/Target Support Files/Pods-js-talk/Pods-js-talk.release.xcconfig"; sourceTree = "<group>"; };
+		BCDB64692F5819FFCBB0D0AC /* Pods-js-talk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-js-talk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-js-talk/Pods-js-talk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71EDCDDE02D417DA0260513E /* Pods_js_talk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +48,11 @@
 		114893481DEBC6A700476D6A = {
 			isa = PBXGroup;
 			children = (
+				114893731DEC203D00476D6A /* webviews */,
 				114893531DEBC6A700476D6A /* js-talk */,
 				114893521DEBC6A700476D6A /* Products */,
+				FF065DDB657D9ABC355C4EA2 /* Pods */,
+				AC8E216C3FEC844873C00F81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +68,32 @@
 			isa = PBXGroup;
 			children = (
 				114893541DEBC6A700476D6A /* AppDelegate.swift */,
-				114893561DEBC6A700476D6A /* ViewController.swift */,
 				114893581DEBC6A700476D6A /* Main.storyboard */,
+				114893661DEBC78F00476D6A /* NativeViewController.swift */,
+				114893681DEBC7A900476D6A /* HybridViewController.swift */,
 				1148935B1DEBC6A700476D6A /* Assets.xcassets */,
 				1148935D1DEBC6A700476D6A /* LaunchScreen.storyboard */,
 				114893601DEBC6A700476D6A /* Info.plist */,
+				1148936A1DEBD92A00476D6A /* js-talk-Bridging-Header.h */,
 			);
 			path = "js-talk";
+			sourceTree = "<group>";
+		};
+		AC8E216C3FEC844873C00F81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8105F390E42315E3942B6363 /* Pods_js_talk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF065DDB657D9ABC355C4EA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCDB64692F5819FFCBB0D0AC /* Pods-js-talk.debug.xcconfig */,
+				85CD0E47B8630A11E1DDF123 /* Pods-js-talk.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 114893631DEBC6A700476D6A /* Build configuration list for PBXNativeTarget "js-talk" */;
 			buildPhases = (
+				08C0D8EF00996C2BB6AA9345 /* [CP] Check Pods Manifest.lock */,
 				1148934D1DEBC6A700476D6A /* Sources */,
 				1148934E1DEBC6A700476D6A /* Frameworks */,
 				1148934F1DEBC6A700476D6A /* Resources */,
+				96FCAEB6569AF1CD054FEFD8 /* [CP] Embed Pods Frameworks */,
+				AA8DBD4EB7A038ACA3FE7331 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +131,8 @@
 				TargetAttributes = {
 					114893501DEBC6A700476D6A = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = F8BW52E4R7;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114893741DEC203D00476D6A /* webviews in Resources */,
 				1148935F1DEBC6A700476D6A /* LaunchScreen.storyboard in Resources */,
 				1148935C1DEBC6A700476D6A /* Assets.xcassets in Resources */,
 				1148935A1DEBC6A700476D6A /* Main.storyboard in Resources */,
@@ -131,13 +169,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08C0D8EF00996C2BB6AA9345 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		96FCAEB6569AF1CD054FEFD8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-js-talk/Pods-js-talk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA8DBD4EB7A038ACA3FE7331 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-js-talk/Pods-js-talk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1148934D1DEBC6A700476D6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				114893571DEBC6A700476D6A /* ViewController.swift in Sources */,
+				114893691DEBC7A900476D6A /* HybridViewController.swift in Sources */,
 				114893551DEBC6A700476D6A /* AppDelegate.swift in Sources */,
+				114893671DEBC78F00476D6A /* NativeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,24 +343,33 @@
 		};
 		114893641DEBC6A700476D6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCDB64692F5819FFCBB0D0AC /* Pods-js-talk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = F8BW52E4R7;
 				INFOPLIST_FILE = "js-talk/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lioniq.js-talk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "js-talk/js-talk-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		114893651DEBC6A700476D6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CD0E47B8630A11E1DDF123 /* Pods-js-talk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = F8BW52E4R7;
 				INFOPLIST_FILE = "js-talk/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lioniq.js-talk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "js-talk/js-talk-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -297,6 +393,7 @@
 				114893651DEBC6A700476D6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
