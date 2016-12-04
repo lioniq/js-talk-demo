@@ -29,10 +29,10 @@ class NativeViewController: UITableViewController {
     
     private func getItem() {
         // API get item
-        let appKey = "15ef0668e2f7d3234c1706997156c8a2"
-        let appSecret = "2ab6633650437c8bb29ee5bcdf072034"
+        let appKey = "eb9e43b7e8b64638748fcd00eec065ef"
+        let appSecret = "253f7ce1b23f68e5ad9199e5bbf400e0"
         
-        let itemKey = "1074578361b531a8dfe6fb6f1e9bf5d7"
+        let itemKey = "82bf2bfbb75071b9d76f94258a2b67fc"
         let url = "https://lioniq.com/api/items/\(itemKey)"
         
         let headers: [String:String] = [
@@ -52,10 +52,6 @@ class NativeViewController: UITableViewController {
                 
                 if let title = json["title"] as? String {
                     self.itemTitleLabel.text = title
-                }
-                
-                if let price = json["price_label"] as? String {
-                    // TODO
                 }
                 
                 if let coverImage = json["square_cover_photo_url"] as? String {
@@ -96,8 +92,6 @@ class NativeViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let urlString = detailPhotos[indexPath.row]
         let url = URL(string: urlString)!
-        
-        // typedef void(^SDWebImageCompletionBlock)(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL);
 
         let imageView = cell.viewWithTag(1001) as! UIImageView
         let placeholderImage = UIImage(named: "placeholder")!
@@ -105,12 +99,12 @@ class NativeViewController: UITableViewController {
         
         let completeBlock: SDWebImageCompletionBlock = {(image, error, cacheType, imageURL) -> Void in
             
-            
             // calc image height
             let w = imageView.frame.width
             let k = w / (image?.size.width)!
             let h = (image?.size.height)! * k
             
+            // cache image height
             self.imageHeights[indexPath.row] = h
             
             // reload cell
@@ -120,9 +114,10 @@ class NativeViewController: UITableViewController {
             
         }
 
+        if imageView.image == nil {
+            imageView.sd_setImage(with: url, placeholderImage: placeholderImage, options: [SDWebImageOptions.progressiveDownload], completed: completeBlock)
+        }
         
-        imageView.sd_setImage(with: url, placeholderImage: placeholderImage, options: [SDWebImageOptions.progressiveDownload], completed: completeBlock)
-    
         return cell
     }
 }
